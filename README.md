@@ -195,6 +195,67 @@ Tab1:AddSlider({
 * `Default` - (number) The default value of the slider.
 * `Callback` - (function) The function executed when the slider value changes.
 
+## Creating a Label
+```lua
+Tab:AddLabel("Label")
+```
+
+### Changing the value of an existing label
+```lua
+CoolLabel:Set("Label New!")
+```
+
+
+## Creating a Paragraph
+```lua
+Tab:AddParagraph("Paragraph","Paragraph Content")
+```
+
+### Changing an existing paragraph
+```lua
+CoolParagraph:Set("Paragraph New!", "New Paragraph Content!")
+```
+
+
+## Creating an Adaptive Input
+```lua
+Tab:AddTextbox({
+	Name = "Textbox",
+	Default = "default box input",
+	TextDisappear = true,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+
+--[[
+Name = <string> - The name of the textbox.
+Default = <string> - The default value of the textbox.
+TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
+Callback = <function> - The function of the textbox.
+]]
+```
+
+
+## Creating a Keybind
+```lua
+Tab:AddBind({
+	Name = "Bind",
+	Default = Enum.KeyCode.E,
+	Hold = false,
+	Callback = function()
+		print("press")
+	end    
+})
+
+--[[
+Name = <string> - The name of the bind.
+Default = <keycode> - The default value of the bind.
+Hold = <bool> - Makes the bind work like: Holding the key > The bind returns true, Not holding the key > Bind returns false.
+Callback = <function> - The function of the bind.
+]]
+```
+
 #### Creating a Textbox
 
 ```lua
